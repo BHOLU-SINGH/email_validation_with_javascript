@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Check Email Validation with JavaScript | Free Projects1 </title>
+    <meta name="keywords" content="email validation with JavaScript, email validation, email validation in javascript, email validation regex, email validation in html, email validation tool, email validation in jquery, email validation in js, email validation regex javascript, email validation rules, email validation javascript, email validation jquery, free projects with source code and documentation, free projects download, free projects for all, free projects with source code, free projects download sites, free projects for cse, free projects for computer science students, free project 1, free projects1, free projects for computer science, free projects on github, free source code for website, free source code projects, free source code download, free source code for website design in html, free projects, free projects 1 blog, freeprojectsforall, free project download, free project, free project file, free project download with source code, free projects 1 blog, bholu, singh, Bholu Singh, bholu singh github,  who is bholu singh, bholu singh bharatpur, Bholu Singh Bikaner, bholu blogger, bholu sigh blog, freeprojects1, freeproject1, FreeProjects1.blogspot.com">
+    <meta name="description" content="It is a Email Validation free project. In this project, we can check email addresses means that email address is right or wrong. Put email address in input field and if green light is on than it's right or if red light is on than it's wrong email address.">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h3> Email Validation | Free Projects1 </h3>
+        <form action="#" id="form">
+            <div class="inputBox">
+                <input type="text" name="" id="email" placeholder="Enter Email Address" onkeyup="validate();">
+                <span class="indicator"></span>
+            </div>
+        </form>
+    </div>
+    <script>
+        function validate(){
+            const form = document.getElementById('form');
+            const email = document.getElementById('email').value;
+            const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if(email.match(pattern)){
+                form.classList.add('valid');
+                form.classList.remove('invalid');
+            }else{
+                form.classList.add('invalid');
+                form.classList.remove('valid');
+            }
+            if(email == ""){
+                form.classList.remove('valid');
+                form.classList.remove('invalid');
+            }
+        }
+    </script>
+</body>
+</html>
